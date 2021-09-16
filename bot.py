@@ -124,54 +124,6 @@ async def MEME(ctx):
 
     await ctx.send(submission.url)
 
-@client.command()
-async def wsp(ctx):
-    WSP_submissions = reddit.subreddit('WinStupidPrizes').hot()
-    post_to_pick = random.randint(1, 100)
-    for i in range(0, post_to_pick):
-        submission = next(x for x in WSP_submissions if not x.stickied)
-
-    await ctx.send(submission.url)
-
-@client.command()
-async def Cursed(ctx):
-    cursed_submissions = reddit.subreddit('cursedcomments').hot()
-    post_to_pick = random.randint(1, 100)
-    for i in range(0, post_to_pick):
-        submission = next(x for x in cursed_submissions if not x.stickied)
-
-    await ctx.send(submission.url)
-
-@client.command(aliases=[f"milpics",])
-async def milpic(ctx):
-    specops_submissions = reddit.subreddit('SpecOpsArchive',).hot()
-    post_to_pick = random.randint(1, 100)
-    for i in range(0, post_to_pick):
-        submission = next(x for x in specops_submissions if not x.stickied)
-
-    await ctx.send(submission.url)
-
-
-@client.command()
-async def shawn(ctx):
-    channel = ctx.author.voice.channel
-    await channel.connect()
-    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
-    voice.play(discord.FFmpegPCMAudio("songs\\shawn.mp4"))
-    await ctx.send("https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Gay_Pride_Flag.svg/640px-Gay_Pride_Flag.svg.png")
-
-@client.command()
-async def pup(ctx):
-    puppic = ['https://drive.google.com/file/d/1uDkYf53u18xrdzJC3CC_g1_WrgefGflY/view?usp=sharing',
-             'https://drive.google.com/file/d/1tHUanYQcsPYvAX1OhSWvrUZArvB-jpT6/view?usp=sharing',
-             'https://drive.google.com/file/d/1tJ8mlL_jrqJy8NDYk2Xa9Qzdc1d0cx2P/view?usp=sharing']
-
-    await ctx.send(f'{random.choice(puppic)}')
-
-@client.command()
-async def lolz(ctx):
-    await ctx.send("")
-
 
 @client.command(pass_context=True)
 async def coinflip(ctx):
@@ -181,38 +133,6 @@ async def coinflip(ctx):
 
     await ctx.send(f'{random.choice(variable)}')
 
-@client.command(aliases=[f"nsfw"])
-async def NSFW(ctx):
-    channel = ctx.author.voice.channel
-    await channel.connect()
-    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
-    voice.play(discord.FFmpegPCMAudio("songs\\rickroll.mp4"))
-    await ctx.send("https://static.wikia.nocookie.net/meme/images/d/db/Rick-astley.png/revision/latest/top-crop/width/360/height/450?cb=20200713010539")
-
-@client.command()
-async def test(ctx):
-    await ctx.send("")
-
-@client.command()
-async def Cringe(ctx):
-    await ctx.send("That cringy looser needs to get friends")
-
-@client.command()
-async def zane(ctx):
-    await ctx.send("Zane is the creator of this bot!")
-
-@client.command()
-async def mason(ctx):
-    await ctx.send("https://youtu.be/1ehaThDr_bg")
-
-@client.command()
-async def backup(ctx):
-    channel = ctx.author.voice.channel
-    await channel.connect()
-    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
-    voice.play(discord.FFmpegPCMAudio("songs\\help.mp4"))
-
-
 @client.command()
 async def face(ctx):
     print("( ͡° ͜ʖ ͡°)")
@@ -220,4 +140,4 @@ async def face(ctx):
 
 
 
-client.run('ODQ0MTEyODc0NTk0ODkzODc0.YKNrYA.XxSMPEaSTJzh1pd9LsBLKIliFsA')
+client.run('')
