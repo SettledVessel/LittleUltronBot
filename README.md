@@ -1,4 +1,5 @@
 dependencies
+           
            PyNal
            
            ffmpeg
